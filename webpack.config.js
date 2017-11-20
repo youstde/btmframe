@@ -13,9 +13,6 @@ var plugins = [];
 plugins.push(new UglifyJSPlugin());
 plugins.push( new ExtractTextPlugin("styles.css"));
 var webpackConfig = {
-    entry: {
-        app: path.resolve(APP_PATH, 'page/index/index.js')
-    },
     output: {
         path: __dirname+'/dist/static',
         filename: '[name].[chunkhash].js'
