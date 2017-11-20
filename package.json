@@ -1,7 +1,7 @@
 {
-  "name": "gameframe",
-  "version": "0.1.11",
-  "author": "gameframe",
+  "name": "btmframe",
+  "version": "0.1.12",
+  "author": "btmframe",
   "main":"./build.js",
   "scripts": {
   },
