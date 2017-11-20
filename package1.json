@@ -1,7 +1,7 @@
 {
-  "name": "st",
-  "version": "0.1.14",
-  "author": "st",
+  "name": "btm",
+  "version": "0.1.15",
+  "author": "btm",
   "main":"./build.js",
   "scripts": {
     "dev": "npm run update;gulp dev;",
