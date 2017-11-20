@@ -1,3 +1,93 @@
 body{
-  visibility: hidden;
+  font-family: 'Microsoft Yahei', Arial, sans-serif;
+  font-size: 0.28rem;
+  visibility: visible;
+}
+input:focus, a:focus, button:focus {
+  outline:0
+}
+
+.middle{
+  vertical-align: middle;
+}
+
+.block {
+  display: block;
+}
+
+.inline {
+  display: inline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.hide {
+  display: none;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+.clearfix:after{
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+}
+
+*html .clearfix{
+  height:1%;
+}
+*+html .clearfix{
+  height:1%;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*鏂囧瓧瓒呰繃鏄剧ず...*/
+.clip{
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+.clip-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  word-break: break-all
+}
+
+.clip-text-2 {
+  -webkit-line-clamp: 2;
+}
+
+.clip-text-3 {
+  -webkit-line-clamp: 3
+}
+
+
+a{
+  text-decoration: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

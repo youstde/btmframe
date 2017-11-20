@@ -1,13 +1,6 @@
 var Vap = require('./vap.js');
 var host = '//127.0.0.1:7001';
 
-if(window.location.host.indexOf('activity')>-1){
-    host = window.location.host.replace('activity','//game');
-    if(window.location.href.indexOf('/pre/')>-1){
-        host = window.location.host.replace('activity','//gamepre');
-    }
-}
-
 var Data = {
     gain:function(data,callback){
         data.token = getMd5Str();
