@@ -7,14 +7,14 @@ var Build = {
         this._init();
         var cwd = this.config.cwd;
         this.config.files = this.config.files.concat([
-            [__dirname + '/mock', cwd],
-            ['-rf',__dirname + '/src/layout', cwd + '/src'],
             [__dirname + '/src/page/index/index.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/html.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/gamejson.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/content.ejs', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/index.less', cwd + '/src/page/index'],
-            [__dirname + '/README.md', cwd]
+            [__dirname + '/README.md', cwd],
+            ['-rf',__dirname + '/src/layout', cwd + '/src'],
+            ['-rf',__dirname + '/mock', cwd]
         ]);
         this.mkdir();
         this.copy();
