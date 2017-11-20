@@ -3,7 +3,6 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpackdevserver = require('webpack-dev-server');
 var webpackConfig = require('./webpack.config.js');
-var webpackDevConfig = require('./webpack.dev.config.js');
 var path = require('path');
 var globs = require('globs');
 var spawn = require('child_process').spawn;
@@ -18,8 +17,6 @@ var getEntry = function(callback){
     globs('./src/page/*/index.js',function(err,files){
         var entry = {};
         files.forEach(function(file){
-            console.log('BeforeName:',file);
-            console.log('AfterName:',file.replace('./src/page/','').replace('/index.js',''));
             var name = file.replace('./src/page/','').replace('/index.js','');
             entry[name] = file;
         });
@@ -30,8 +27,8 @@ var getEntry = function(callback){
 /**
  * 删除dist文件
  */
-var delDist = function(type){
-    del.sync(type.output.path);
+var delDist = function(){
+    del.sync(webpackConfig.output.path);
 };
 
 /**
@@ -39,8 +36,8 @@ var delDist = function(type){
  * @param entry
  * @returns {*}
  */
-var compile = function(type,entry){
-    type.entry = entry;
+var compile = function(entry){
+    webpackConfig.entry = entry;
     Object.keys(entry).forEach(function(key){
         var plugin = new HtmlWebpackPlugin({
             template:'src/page/'+key+'/html.js',
@@ -48,11 +45,11 @@ var compile = function(type,entry){
             inject:true,
             chunks:['commonjs',key]
         });
-        type.plugins.push(plugin);
+        webpackConfig.plugins.push(plugin);
     });
 
 
-    return webpack(type,function(err,stats){
+    return webpack(webpackConfig,function(err,stats){
         if(err){
             throw err;
         }
@@ -63,13 +60,14 @@ var compile = function(type,entry){
  * gulp dev
  */
 gulp.task('dev',function(){
-    webpackDevConfig.devtool = 'source-map';
-    delDist(webpackDevConfig);
+    webpackConfig.plugins.splice(0,1);
+    webpackConfig.devtool = 'source-map';
+    delDist();
     getEntry(function(entry){
-        var compiler = compile(webpackDevConfig, entry);
+        var compiler = compile(entry);
         const server = new webpackdevserver(compiler,{
             inline:true,
-            contentBase: webpackDevConfig.output.path,
+            contentBase: webpackConfig.output.path,
             hot: false,
             historyApiFallback: true,
             stats:{
@@ -89,10 +87,10 @@ gulp.task('dev',function(){
 gulp.task('pre',function(){
     var cwd = process.cwd();
     var pathObj = path.parse(cwd);
-    delDist(webpackConfig);
+    delDist();
     getEntry(function(entry){
         webpackConfig.output.publicPath="//oss.ltcdn.cc/pre/baitai-game/"+pathObj.name+"/";
-        var compiler = compile(webpackConfig, entry);
+        var compiler = compile(entry);
     })
 });
 
@@ -102,10 +100,10 @@ gulp.task('pre',function(){
 gulp.task('prod',function(){
     var cwd = process.cwd();
     var pathObj = path.parse(cwd);
-    delDist(webpackConfig);
+    delDist();
     getEntry(function(entry){
         webpackConfig.output.publicPath="//oss.ltcdn.cc/prod/baitai-game/"+pathObj.name+"/";
-        var compiler = compile(webpackConfig, entry);
+        var compiler = compile(entry);
     })
 });
 
