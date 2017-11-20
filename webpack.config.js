@@ -25,8 +25,11 @@ var webpackConfig = {
             {test: /\.html$/, loader: 'html-loader'},
             {
                 test: /\.less$/,
-                loader:  ExtractTextPlugin.extract("style-loader", "css-loader", "less-loader"),
-                include: path.resolve(APP_PATH)
+                use: ExtractTextPlugin.extract({
+                    fallback: 'style-loader',
+                    //resolve-url-loader may be chained before sass-loader if necessary
+                    use: ['css-loader', 'less-loader']
+                })
             },
             {test: /\.ejs/, loader: 'ejs-loader?variable=data'}
         ]
