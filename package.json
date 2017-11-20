@@ -1,6 +1,6 @@
 {
   "name": "btmframe",
-  "version": "0.1.23",
+  "version": "0.1.24",
   "author": "btmframe",
   "main":"./build.js",
   "scripts": {
