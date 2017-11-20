@@ -18,6 +18,8 @@ var getEntry = function(callback){
     globs('./src/page/*/index.js',function(err,files){
         var entry = {};
         files.forEach(function(file){
+            console.log('BeforeName:',file);
+            console.log('AfterName:',file.replace('./src/page/','').replace('/index.js',''));
             var name = file.replace('./src/page/','').replace('/index.js','');
             entry[name] = file;
         });
