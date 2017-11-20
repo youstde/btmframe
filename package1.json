@@ -4,9 +4,9 @@
   "author": "btm",
   "main":"./build.js",
   "scripts": {
-    "dev": "npm run update;gulp dev;",
-    "pre": "npm run update;gulp pre;",
-    "prod": "npm run update;gulp prod;",
+    "dev": "gulp dev;",
+    "pre": "gulp pre;",
+    "prod": "gulp prod;",
     "mock": "gulp mock;",
     "update":"cnpm install git+ssh://git@github.com:youstde/btmframe.git;node node_modules/btmframe/build.js update"
   },

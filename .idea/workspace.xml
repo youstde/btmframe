@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="97225521-1828-41d9-ba76-aece18847f19" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/components/data.js" afterPath="$PROJECT_DIR$/src/modules/data.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.js" afterPath="$PROJECT_DIR$/build.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package1.json" afterPath="$PROJECT_DIR$/package1.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/index/index.js" afterPath="$PROJECT_DIR$/src/page/index/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -65,8 +59,8 @@
       <file leaf-file-name="package1.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package1.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+            <state relative-caret-position="119">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -261,12 +255,12 @@
       <workItem from="1511149046151" duration="811000" />
       <workItem from="1511156540542" duration="324000" />
       <workItem from="1511160429449" duration="1002000" />
-      <workItem from="1511161593496" duration="10422000" />
+      <workItem from="1511161593496" duration="10463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14338000" />
+    <option name="totallyTimeSpent" value="14379000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="813" extended-state="0" />
@@ -688,8 +682,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package1.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="2" column="20" lean-forward="false" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+        <state relative-caret-position="119">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
         </state>
       </provider>
