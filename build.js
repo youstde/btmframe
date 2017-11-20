@@ -10,7 +10,6 @@ var Build = {
         this.config.files = this.config.files.concat([
             [__dirname + '/src/page/index/index.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/html.js', cwd + '/src/page/index'],
-            [__dirname + '/src/page/index/gamejson.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/content.ejs', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/index.less', cwd + '/src/page/index'],
             [__dirname + '/README.md', cwd],
@@ -36,8 +35,7 @@ var Build = {
                 ['-f', __dirname + '/gulpfile.js', cwd],
                 ['-f', __dirname + '/webpack.config.js', cwd],
                 ['-f', __dirname + '/package1.json', cwd+'/package.json'],
-                ['-rf',__dirname + '/src/components', cwd + '/src'],
-                ['-rf', __dirname + '/src/modules', cwd + '/src']
+                ['-rf',__dirname + '/src/components', cwd + '/src']
             ]
         };
     },
