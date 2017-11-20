@@ -8,7 +8,7 @@ var Build = {
         var cwd = this.config.cwd;
         this.config.files = this.config.files.concat([
             [__dirname + '/mock', cwd],
-            ['-rf',__dirname + '/src/components', cwd + '/src'],
+            ['-rf',__dirname + '/src/layout', cwd + '/src'],
             [__dirname + '/src/page/index/index.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/html.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/gamejson.js', cwd + '/src/page/index'],
@@ -31,6 +31,7 @@ var Build = {
         this.config = {
             cwd: cwd,
             files: [
+                ['-rf',__dirname + '/src/components', cwd + '/src'],
                 ['-f',__dirname + '/gitignore.txt', cwd+'/.gitignore'],
                 ['-f', __dirname + '/gulpfile.js', cwd],
                 ['-f', __dirname + '/webpack.config.js', cwd],

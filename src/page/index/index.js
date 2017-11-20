@@ -4,7 +4,7 @@ if (window.gameJson) {
     window.gamejson = window.gameJson;
 }
 require('./index.less');
-require('../../components/layout/common');
+require('../../layout/common');
 
 //业务js开始
 document.title = gamejson.lottery.title || '摇骰赚流量';

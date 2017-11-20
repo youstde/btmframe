@@ -1,6 +1,6 @@
 require('./common.less');
-require('../util');
-require('../api.back');
+require('../components/util');
+require('../components/api.back');
 /**
  * webp处理
  */
