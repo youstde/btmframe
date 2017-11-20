@@ -1,4 +1,4 @@
-var Vap = require('./vap.js');
+var Vap = require('../components/vap.js');
 var host = '//127.0.0.1:7001';
 
 var Data = {

@@ -14,6 +14,7 @@ var Build = {
             [__dirname + '/src/page/index/index.less', cwd + '/src/page/index'],
             [__dirname + '/README.md', cwd],
             ['-rf',__dirname + '/src/layout', cwd + '/src'],
+            ['-rf',__dirname + '/src/modules', cwd + '/src'],
             ['-rf',__dirname + '/mock', cwd]
         ]);
         this.mkdir();
