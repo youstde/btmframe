@@ -8,7 +8,7 @@ var Build = {
         var cwd = this.config.cwd;
         this.config.files = this.config.files.concat([
             [__dirname + '/mock', cwd],
-            [__dirname + '/src/components', cwd + '/src'],
+            ['-rf',__dirname + '/src/components', cwd + '/src'],
             [__dirname + '/src/page/index/index.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/html.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/gamejson.js', cwd + '/src/page/index'],
