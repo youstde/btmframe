@@ -59,35 +59,6 @@ window.check_webp_feature=function(feature, callback) {
     img.src = "data:image/webp;base64," + kTestImages[feature];
 };
 
-window.findNormalImg=function() {
-    var gameConfig = window.gameJson? window.gameJson.lottery.sceneConfig: window.gamejson.lottery.sceneConfig;
-    Object.keys(gameConfig).forEach(function(key){
-        if(gameConfig[key]['style']) {
-            if(gameConfig[key]['style']['background-image']) {
-                if(gameConfig[key]['style']['background-image'][0].indexOf('?') === -1) {
-                    gameConfig[key]['style']['background-image'][0] = switchWebp(gameConfig[key]['style']['background-image'][0]);
-                }
-            }
-        }
-        if(gameConfig[key]['attr']) {
-            if(gameConfig[key]['attr']['src']) {
-                if(gameConfig[key]['attr']['src'][0].indexOf('?') === -1) {
-                    gameConfig[key]['attr']['src'][0] = switchWebp(gameConfig[key]['attr']['src'][0]);
-                }
-            }
-        }
-    });
-    window.gamejson.lottery.sceneConfig = gameConfig;
-};
-
-window.goodsNormalImg = function() {
-    var goodsConfig = window.gameJson? window.gameJson.lottery.lotteryRewardVOs: window.gamejson.lottery.lotteryRewardVOs;
-    goodsConfig.forEach(function(item) {
-        item.iconUrl = switchWebp(item.iconUrl);
-    });
-    window.gamejson.lottery.lotteryRewardVOs = goodsConfig;
-};
-
 window.switchWebp=function(normalUrl) {
     return normalUrl + '?x-oss-process=image/format,webp';
 };
