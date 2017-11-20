@@ -31,11 +31,11 @@ var Build = {
         this.config = {
             cwd: cwd,
             files: [
-                ['-rf',__dirname + '/src/components', cwd + '/src'],
                 ['-f',__dirname + '/gitignore.txt', cwd+'/.gitignore'],
                 ['-f', __dirname + '/gulpfile.js', cwd],
                 ['-f', __dirname + '/webpack.config.js', cwd],
                 ['-f', __dirname + '/package1.json', cwd+'/package.json'],
+                ['-rf',__dirname + '/src/components', cwd + '/src'],
                 ['-rf', __dirname + '/src/modules', cwd + '/src']
             ]
         };
