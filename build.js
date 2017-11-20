@@ -1,6 +1,7 @@
 var spawn = require('child_process').spawn;
 var fs = require('fs');
 var apiName = process.argv[2];
+console.log('apiName:',apiName);
 
 var Build = {
     create: function () {
