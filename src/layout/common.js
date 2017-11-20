@@ -1,4 +1,4 @@
-require('../components/common.less');
+require('./common.less');
 require('../components/util');
 require('../components/api.back');
 /**
