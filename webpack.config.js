@@ -5,13 +5,14 @@ var webpack = require('webpack'),
     APP_PATH=path.resolve(ROOT_PATH,'src'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var plugins = [];
+var plugins = [
+    new UglifyJSPlugin(),
+    new ExtractTextPlugin("styles.css")
+];
 // plugins.push(new webpack.optimize.CommonsChunkPlugin({
 //     name:"commonjs",
 //     filename:"common.[chunkhash].js"
 // }));
-plugins.push(new UglifyJSPlugin());
-plugins.push( new ExtractTextPlugin("styles.css"));
 var webpackConfig = {
     output: {
         path: __dirname+'/dist/static',
