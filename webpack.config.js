@@ -1,7 +1,10 @@
 var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
-var webpack = require('webpack');
+var webpack = require('webpack'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-var plugins = [];
+var plugins = [
+    new ExtractTextPlugin("styles.css")
+];
 // plugins.push(new webpack.optimize.CommonsChunkPlugin({
 //     name:"commonjs",
 //     filename:"common.[chunkhash].js"
@@ -15,8 +18,8 @@ var webpackConfig = {
     module: {
         loaders: [
             {test: /\.html$/, loader: 'html-loader'},
-            {test: /\.less$/, loader: 'style-loader!css-loader!less-loader'},
-            {test: /\.css/, loader: 'style-loader!css-loader'},
+            {test: /\.less$/, loader:  ExtractTextPlugin.extract("style-loader", "css-loader", "less-loader")},
+            {test: /\.css/, loader: ExtractTextPlugin.extract("style-loader", "css-loader")},
             {test: /\.ejs/, loader: 'ejs-loader?variable=data'}
         ]
     },
