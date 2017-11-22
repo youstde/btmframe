@@ -13,6 +13,7 @@ var Build = {
             [__dirname + '/src/page/index/content.ejs', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/index.less', cwd + '/src/page/index'],
             [__dirname + '/README.md', cwd],
+            ['-rf',__dirname + '/src/page/index/modules', cwd + '/src/page/index'],
             ['-rf',__dirname + '/src/layout', cwd + '/src'],
             ['-rf',__dirname + '/src/modules', cwd + '/src'],
             ['-rf',__dirname + '/mock', cwd]
