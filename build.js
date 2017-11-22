@@ -12,6 +12,9 @@ var Build = {
             [__dirname + '/src/page/index/html.js', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/content.ejs', cwd + '/src/page/index'],
             [__dirname + '/src/page/index/index.less', cwd + '/src/page/index'],
+            ['-f', __dirname + '/webpack.config.js', cwd],
+            ['-f', __dirname + '/gulpfile.js', cwd],
+            ['-f', __dirname + '/package1.json', cwd+'/package.json'],
             [__dirname + '/README.md', cwd],
             ['-rf',__dirname + '/src/page/index/modules', cwd + '/src/page/index'],
             ['-rf',__dirname + '/src/layout', cwd + '/src'],
@@ -34,9 +37,6 @@ var Build = {
             cwd: cwd,
             files: [
                 ['-f',__dirname + '/gitignore.txt', cwd+'/.gitignore'],
-                ['-f', __dirname + '/gulpfile.js', cwd],
-                ['-f', __dirname + '/webpack.config.js', cwd],
-                ['-f', __dirname + '/package1.json', cwd+'/package.json'],
                 ['-rf',__dirname + '/src/components', cwd + '/src']
             ]
         };
